@@ -16,18 +16,29 @@
       var context = canvas.getContext('2d');
       var x = canvas.width / 2;
       var y = canvas.height / 2;
-      var radius = 75;
-      var startAngle = 1.1 * Math.PI;
-      var endAngle = 1.9 * Math.PI;
-      var counterClockwise = false;
 
-      context.beginPath();
-      context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
-      context.lineWidth = 15;
 
-      // line color
-      context.strokeStyle = 'yellow';
-      context.stroke();
+
+      var drawArc = function(context, color, startingAngle, endingAngle, radius) {
+
+
+          var startAngle = 0.0 * Math.PI;
+          var endAngle = 0.4 * Math.PI;
+          var counterClockwise = false;
+
+          context.beginPath();
+          context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
+          context.lineWidth = 15;
+          // line color
+          context.strokeStyle = color ;
+          context.stroke();
+
+
+      }
+
+      drawArc(context, 'red', 0, 0,60);
+      drawArc(context, 'yellow', 0 , 0,  75);
+
     </script>
   </body>
 </html>
