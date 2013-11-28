@@ -21,9 +21,9 @@
               var x = 0;
 
               var y = 0;
-              currentOffset += radius*2;
-              x  = currentOffset
-              drawCircle(x, 100 , context,   radius);
+              x  = currentOffset;
+              drawCircle(x+radius, 100 , context, radius);
+              currentOffset += (radius*2);
           }
   };
 
@@ -33,7 +33,10 @@
   var circles = [
   ];
   for(var ii = 0; ii < 10 ; ii++) {
-      circles.push({"radius": 2*ii});
+      var radiusRandom = Math.random();
+      var radius = 20 * radiusRandom + 2;
+      radius = Math.ceil(radius);
+      circles.push({"radius": radius});
   }
 
   drawCircles(context, circles, 3);
