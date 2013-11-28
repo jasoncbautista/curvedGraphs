@@ -1,7 +1,7 @@
       var canvas = document.getElementById('myCanvas');
       var context = canvas.getContext('2d');
 
-      var drawCircle = function(x, y, context, color,  endingAngle, radius ){
+      var drawCircle = function(x, y, context, radius ){
           var counterClockwise = false;
 
           context.beginPath();
@@ -23,10 +23,13 @@
               var y = 0;
               currentOffset += radius*2;
               x  = currentOffset
-              drawCircle(x, 100 , context, 'yellow', 0.4,  radius);
+              drawCircle(x, 100 , context,   radius);
           }
   };
 
+
+
+  // Sample implementation:
   var circles = [
   ];
   for(var ii = 0; ii < 10 ; ii++) {
