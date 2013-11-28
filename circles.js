@@ -14,5 +14,29 @@
       }
 
       var radius = 10;
+      var yBase = 30;
       drawCircle(20, 20, context, 'yellow', 0.4,  radius);
+
+
+    var drawCircles  = function( context, circles , selectedIndex) {
+          var currentOffset = 5;
+          for(var ii = 0; ii < circles.length; ii++) {
+              var circle = circles[ii];
+              var radius = circle.radius;
+              var x = 0;
+
+              var y = 0;
+              currentOffset += radius;
+              x  = currentOffset
+              drawCircle(x, 100 , context, 'yellow', 0.4,  radius);
+          }
+  };
+
+  var circles = [
+  ];
+  for(var ii = 0; ii < 10 ; ii++) {
+      circles.push({"radius": 2*ii};
+  }
+
+  drawCircle(context, circles, 3);
 
