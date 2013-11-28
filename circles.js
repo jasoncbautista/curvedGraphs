@@ -1,12 +1,12 @@
       var canvas = document.getElementById('myCanvas');
       var context = canvas.getContext('2d');
 
-      var drawCircle = function(x, y, context, radius ){
+      var drawCircle = function(x, y, context, radius, color ){
           var counterClockwise = false;
 
           context.beginPath();
           context.arc(x, y, radius, 0 ,  2* Math.PI , counterClockwise);
-          context.fillStyle = 'green';
+          context.fillStyle = color;
           context.fill();
           context.lineWidth = 5;
           context.strokeStyle = '#003300';
@@ -19,10 +19,12 @@
               var circle = circles[ii];
               var radius = circle.radius;
               var x = 0;
-
-              var y = 0;
               x  = currentOffset;
-              drawCircle(x+radius, 100 , context, radius);
+              var color = "green";
+              if (ii === selectedIndex ) {
+                  color = "white";
+              }
+              drawCircle(x+radius, 100 , context, radius, color);
               currentOffset += (radius*2);
           }
   };
@@ -30,14 +32,14 @@
 
 
   // Sample implementation:
-  var circles = [
-  ];
+  var circles = [];
   for(var ii = 0; ii < 10 ; ii++) {
       var radiusRandom = Math.random();
-      var radius = 20 * radiusRandom + 2;
+      var radius = 30 * radiusRandom + 2;
       radius = Math.ceil(radius);
       circles.push({"radius": radius});
   }
 
-  drawCircles(context, circles, 3);
+  var selectedIndex = Math.floor( Math.random() * 10);
+  drawCircles(context, circles, selectedIndex );
 
