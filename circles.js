@@ -1,9 +1,7 @@
       var canvas = document.getElementById('myCanvas');
       var context = canvas.getContext('2d');
-
       var drawCircle = function(x, y, context, radius, color ){
           var counterClockwise = false;
-
           context.beginPath();
           context.arc(x, y, radius, 0 ,  2* Math.PI , counterClockwise);
           context.fillStyle = color;
