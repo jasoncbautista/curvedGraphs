@@ -847,7 +847,7 @@ window.Chart = function(context){
                     for (var k=0;  k<data.datasets[i].data.length; k++){
                         // Overriding color of stroke and dot
                         if ( data.datasets[i].selectedPointIndex === k) {
-                            ctx.fillStyle =  "red"; // data.datasets[i].pointColor;
+                            ctx.fillStyle = data.datasets[i].selectedPointColor;
                             // XXX: color of stroke and dot
                             // ctx.strokeStyle = "red"; //  data.datasets[i].pointStrokeColor; ctx.lineWidth = config.pointDotStrokeWidth;
                         } else {
