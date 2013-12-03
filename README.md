@@ -14,3 +14,14 @@ drawCurves(0.3, 0.8, 0.4, true);
 
 
 
+
+
+
+![alt text](https://raw.github.com/jasoncbautista/curvedGraphs/master/curves.png "Curves")
+
+
+
+
+drawCircles([0.1, 0.3, 0.5, 0.11, 0.09]);
+
+![alt text](https://raw.github.com/jasoncbautista/curvedGraphs/master/circle.png "Circles")
