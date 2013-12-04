@@ -22,21 +22,30 @@
           var startAngle = 0.0 * Math.PI;
           var endAngle = endingAngle  * Math.PI;
 
-          var interval = 50;
+          var interval = 10;
           var fraction = endingAngle / interval;
-          for(var ii = 0; ii < interval; ii++) {
+
+          for(var ii = 1; ii < interval; ii++) {
               (function(ii2){
               setTimeout(function(){ 
 
                   var counterClockwise = false;
-                  console.log(ii2);
-                  console.log(fraction);
                   context.beginPath();
-                  context.arc(x, y, radius, startAngle, fraction * ii2 * Math.PI, counterClockwise);
+                  // Calculate new starting angle
+                  startAngle =  fraction * (ii2-1) * Math.PI;
+                  startAngle+=0.05
+                  var endingAngle = fraction * ii2 * Math.PI;
+                  console.log("startAngle", startAngle);
+                  console.log("endAngle ", endingAngle);
+                  context.arc(x, y, radius, startAngle, endingAngle, counterClockwise);
                   context.lineWidth = 15;
+                  if (ii2+1 === interval) {
+                      context.lineWidth = 15;
+                  }
                   // line color
                   context.strokeStyle = color ;
                   context.stroke();
+
               }, ii2*10);
           }(ii));
           }
