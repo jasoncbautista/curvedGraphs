@@ -33,17 +33,17 @@
                   context.beginPath();
                   // Calculate new starting angle
                   startAngle =  fraction * (ii2-1) * Math.PI;
-                  startAngle-=0.01;
+                  startAngle+=0.01;
                   var endingAngle = fraction * ii2 * Math.PI;
                   console.log("startAngle", startAngle);
                   console.log("endAngle ", endingAngle);
                   context.arc(x, y, radius, startAngle, endingAngle, counterClockwise);
                   if (ii2+1 === interval) {
-                      context.lineWidth = 15.5;
+                      // context.lineWidth = 15.5;
                   } else {
-                      context.lineWidth = 14.05
                   }
 
+                  context.lineWidth = 14.05
                   // line color
                   context.strokeStyle = color ;
                   context.stroke();
