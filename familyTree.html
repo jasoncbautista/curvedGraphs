@@ -10,11 +10,18 @@
         data.addColumn('string', 'Manager');
         data.addColumn('string', 'ToolTip');
         data.addRows([
-          [{v:'Phil Jackson', f:"Phil Jackson"}, '', ''],
+[{v:'Phil Jackson', f:"Phil Jackson <br /><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Phil_Jackson_3_cropped.jpg/200px-Phil_Jackson_3_cropped.jpg'>"}, '', ''],
           // [{v:'Mike DAntoni', f:"Mike DAntoni"}, '', ''],
-          [{v:'Kobe Bryant', f:'Kobe '}, 'Phil Jackson', 'Mike DAntoni'],
+[{v:'Kobe Bryant', f:'Kobe Bryant <br /> <img src="http://www.ballerstatus.com/wp-content/uploads/2013/11/kobebryant1.jpg">'}, 'Phil Jackson', 'Mike DAntoni'],
+
+
+
+[{v:'Michael Jordan', f:'Michael Jordan<br /> <img src="http://blogs-images.forbes.com/richdanker/files/2011/05/Jordan_Lipofsky.jpg">'}, 'Phil Jackson', 'Mike DAntoni'],
 
         ]);
+
+
+
         var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
         chart.draw(data, {allowHtml:true});
       }
