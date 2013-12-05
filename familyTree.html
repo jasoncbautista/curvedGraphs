@@ -1,5 +1,10 @@
 <html>
   <head>
+    <style>
+        body {
+            background: rgb(43, 43, 43);
+        }
+    </style>
     <script type='text/javascript' src='https://www.google.com/jsapi'></script>
     <script type='text/javascript'>
       google.load('visualization', '1', {packages:['orgchart']});
@@ -10,13 +15,19 @@
         data.addColumn('string', 'Manager');
         data.addColumn('string', 'ToolTip');
         data.addRows([
-[{v:'Phil Jackson', f:"Phil Jackson <br /><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Phil_Jackson_3_cropped.jpg/200px-Phil_Jackson_3_cropped.jpg'>"}, '', ''],
+[{v:'Phil Jackson', f:"Phil Jackson <br /><img width='150px' src='http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Phil_Jackson_3_cropped.jpg/200px-Phil_Jackson_3_cropped.jpg'>"}, '', ''],
           // [{v:'Mike DAntoni', f:"Mike DAntoni"}, '', ''],
-[{v:'Kobe Bryant', f:'Kobe Bryant <br /> <img src="http://www.ballerstatus.com/wp-content/uploads/2013/11/kobebryant1.jpg">'}, 'Phil Jackson', 'Mike DAntoni'],
+[{v:'Kobe Bryant', f:'Kobe Bryant <br /> <img width="150px" src="http://www.ballerstatus.com/wp-content/uploads/2013/11/kobebryant1.jpg">'}, 'Phil Jackson', 'Mike'],
 
 
 
-[{v:'Michael Jordan', f:'Michael Jordan<br /> <img src="http://blogs-images.forbes.com/richdanker/files/2011/05/Jordan_Lipofsky.jpg">'}, 'Phil Jackson', 'Mike DAntoni'],
+[{v:'Michael Jordan', f:'Michael Jordan<br /> <img width="150px" src="http://blogs-images.forbes.com/richdanker/files/2011/05/Jordan_Lipofsky.jpg">'}, 'Phil Jackson', 'Mike DAntoni'],
+
+
+[{v:'Shaquille O\’Neal ', f:'Shaquille O\’Neal <br /> <img width="150px" src="http://images.onset.freedom.com/ocregister/blogs/lakers.ocregister.com/shaq-223x300.jpg" >'}, 'Phil Jackson', 'Mike DAntoni'],
+
+
+
 
         ]);
 
@@ -26,7 +37,10 @@
 
 
         var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
-        chart.draw(data, {allowHtml:true});
+chart.draw(data, {
+    allowHtml:true
+,   allowCollapse: true
+});
       }
     </script>
   </head>
