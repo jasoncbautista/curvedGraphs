@@ -33,7 +33,7 @@ var dataArray = [0.1, 0.3, 0.5, 0.11, 0.09];
 HipsterGraphs.drawCircles(canvasEl, dataArray);
 ```
 
-![alt text](https://raw.github.com/jasoncbautista/curvedGraphs/master/circle.png "Circles")
+![alt text](https://raw.github.com/jasoncbautista/curvedGraphs/master/circles.png "Circles")
 
 
 ## Circle Pattern
