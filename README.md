@@ -1,4 +1,3 @@
-
 ## Curved Bar Graph
 
 Curved graphs are simple bar graphs in a curve shape.
@@ -31,3 +30,10 @@ Another graph to represent "bucketing" of elements.
 drawCircles([0.1, 0.3, 0.5, 0.11, 0.09]);
 
 ![alt text](https://raw.github.com/jasoncbautista/curvedGraphs/master/circle.png "Circles")
+
+
+## Circle pattern
+
+A simple percentage graph:
+
+circlePattern(.75);
