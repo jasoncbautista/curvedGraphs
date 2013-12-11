@@ -21,7 +21,7 @@ ctx.stroke();
 var max = 100;
 var startX = 0;
 var endX = 100;
-var multiple = 10;
+var multiple = 8;
 // Draw lines BG
 for (var ii = 0; ii < 100 ; ii++) {
     drawLine(startX,ii*multiple,  ii*multiple, 0);
@@ -57,8 +57,11 @@ drawCircle(100, 100, 55, "#242424");
 
 var lineWidth = 20;
 drawArc(100, 100, 55+lineWidth/2,  "red", 0.8, lineWidth);
-var newWidth = 100;
-drawArc(100, 100, 55+lineWidth + newWidth/2,  "blue", 0.8,  newWidth+5);
+var newWidth = 20;
+for(var ii = 0 ; ii < 10; ii ++) {
+    drawArc(100, 100, 55+lineWidth + newWidth/2,  "#242424", 1.0,  newWidth+5);
+    newWidth +=ii*15
+}
 /*
 var canvas = document.getElementById('myCanvas');
 var context = canvas.getContext('2d');
