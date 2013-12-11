@@ -21,10 +21,9 @@ ctx.stroke();
 var max = 100;
 var startX = 0;
 var endX = 100;
-var multiple = 10;
-for (var ii = 0; ii < 9 ; ii++) {
-    var endY = (max) - (ii*multiple);
-    drawLine(startX,ii*multiple, endY, endY   );
+var multiple = 9;
+for (var ii = 0; ii < 100 ; ii++) {
+    drawLine(startX,ii*multiple,  ii*multiple, 0);
 
 }
 
