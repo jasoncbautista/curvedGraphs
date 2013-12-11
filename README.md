@@ -3,19 +3,20 @@
 Curved graphs are simple bar graphs in a curve shape.
 
 
-HipsterGraphs.drawCurves(0.3, 0.8, 0.4);
-
-
-This will take the largest number and use it as a reference to graph those values relative to the largest graph.
-
-If you would like to instead use true values:
-
 
 
 ```javascript 
 var canvasEl =  document.getElementById('myCanvas');
-HipsterGraphs.drawCurves(canvasEl, 0.3, 0.8, 0.4, true);
+HipsterGraphs.drawCurves(canvasEl, 0.3, 0.8, 0.4, );
 ```
+
+
+
+
+This will take the largest number and use it as a reference to graph those values relative to the largest graph.
+
+
+
 
 
 
