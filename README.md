@@ -40,3 +40,5 @@ HipsterGraphs.circlePattern(0.75);
 
 ![alt text](https://raw.github.com/jasoncbautista/curvedGraphs/master/circlePattern.png "Circle with Pattern")
 
+
+
