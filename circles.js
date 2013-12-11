@@ -9,7 +9,7 @@ var drawLine = function(x1, y1, x2, y2) {
 
 ctx.beginPath();
 ctx.moveTo(x1,y1);
-ctx.strokeStyle = '#fff';
+ctx.strokeStyle = '#eee';
 ctx.lineTo(x2, y2);
 ctx.stroke();
 
@@ -21,10 +21,10 @@ ctx.stroke();
 var max = 100;
 var startX = 0;
 var endX = 100;
-var multiple = 8;
+var multiple = 5;
 // Draw lines BG
 for (var ii = 0; ii < 100 ; ii++) {
-    drawLine(startX,ii*multiple,  ii*multiple, 0);
+    drawLine(startX +10,ii*multiple,  ii*multiple + 10, 0);
 }
 
 
@@ -53,13 +53,13 @@ var drawArc= function(x, y,  radius, color, arc, lineWidth){
 }
 
 
-drawCircle(100, 100, 55, "#242424");
+drawCircle(100, 100, 30, "#242424");
 
-var lineWidth = 20;
-drawArc(100, 100, 55+lineWidth/2,  "red", 0.8, lineWidth);
+var lineWidth = 25;
+drawArc(100, 100, 30+lineWidth/2,  "red", 0.75, lineWidth);
 var newWidth = 20;
 for(var ii = 0 ; ii < 10; ii ++) {
-    drawArc(100, 100, 55+lineWidth + newWidth/2,  "#242424", 1.0,  newWidth+5);
+    drawArc(100, 100, 30+lineWidth + newWidth/2,  "#242424", 1.0,  newWidth+5);
     newWidth +=ii*15
 }
 /*
