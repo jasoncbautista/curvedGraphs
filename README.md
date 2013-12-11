@@ -11,7 +11,8 @@ This will take the largest number and use it as a reference to graph those value
 If you would like to instead use true values:
 
 
-drawCurves(0.3, 0.8, 0.4, true);
+
+``` HipsterGraphs.drawCurves(0.3, 0.8, 0.4, true);```
 
 
 
@@ -27,7 +28,10 @@ drawCurves(0.3, 0.8, 0.4, true);
 
 Another graph to represent "bucketing" of elements. 
 
-HipsterGraphs.drawCircles([0.1, 0.3, 0.5, 0.11, 0.09]);
+```
+var dataArray = [0.1, 0.3, 0.5, 0.11, 0.09];
+HipsterGraphs.drawCircles(dataArray);
+```
 
 ![alt text](https://raw.github.com/jasoncbautista/curvedGraphs/master/circle.png "Circles")
 
