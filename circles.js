@@ -3,6 +3,7 @@ var context = canvas.getContext('2d');
 
 var ctx=context;
 
+/*
 
 
 var drawLine = function(x1, y1, x2, y2) {
@@ -70,7 +71,7 @@ drawArc(100, 100, 30+lineWidth/2,  "red", 0.75, lineWidth);
 
 drawCircle(100, 100, 30, "#242424");
 
-/*
+// /**/
 var canvas = document.getElementById('myCanvas');
 var context = canvas.getContext('2d');
 var drawCircle = function(x, y, context, radius, color ){
@@ -114,4 +115,4 @@ for(var ii = 0; ii < 10 ; ii++) {
 var selectedIndex = Math.floor( Math.random() * 10);
 drawCircles(context, circles, selectedIndex );
 
-*/
+// */
