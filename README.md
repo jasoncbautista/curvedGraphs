@@ -45,6 +45,7 @@ HipsterGraphs.drawCircles(canvasEl, dataArray);
 A simple percentage graph:
 
 ```javascript
+var canvasEl =  document.getElementById('myCanvas');
 HipsterGraphs.circlePattern(canvasEl, 0.75);
 ````
 ![alt text](https://raw.github.com/jasoncbautista/curvedGraphs/master/circlePattern.png "Circle with Pattern")
