@@ -32,13 +32,22 @@ HipsterGraphs.drawCircles([0.1, 0.3, 0.5, 0.11, 0.09]);
 ![alt text](https://raw.github.com/jasoncbautista/curvedGraphs/master/circle.png "Circles")
 
 
-## Circle pattern
+## Circle Pattern
 
 A simple percentage graph:
 
 HipsterGraphs.circlePattern(0.75);
 
 ![alt text](https://raw.github.com/jasoncbautista/curvedGraphs/master/circlePattern.png "Circle with Pattern")
+
+
+### Dependecies:
+
+For some of the graphs, Charts.js is needed:
+
+
+
+http://www.chartjs.org/
 
 
 
