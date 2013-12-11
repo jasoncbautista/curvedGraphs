@@ -53,10 +53,10 @@ var drawArc= function(x, y,  radius, color, arc, lineWidth){
 }
 
 
-drawCircle(100, 100, 30, "#242424");
+//drawCircle(100, 100, 30, "#242424");
 
 var lineWidth = 25;
-drawArc(100, 100, 30+lineWidth/2,  "red", 0.75, lineWidth);
+// drawArc(100, 100, 30+lineWidth/2,  "red", 0.75, lineWidth);
 var newWidth = 20;
 for(var ii = 0 ; ii < 10; ii ++) {
     drawArc(100, 100, 30+lineWidth + newWidth/2,  "#242424", 1.0,  newWidth);
