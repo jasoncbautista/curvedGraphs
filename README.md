@@ -1,7 +1,11 @@
+# Hipster Charts
+
+Interesting alternatives to standard bar graphs.
+
+
 ## Curved Bar Graph
 
 Curved graphs are simple bar graphs in a curve shape.
-
 
 
 
@@ -11,16 +15,7 @@ HipsterGraphs.drawCurves(canvasEl, 0.3, 0.8, 0.4, );
 ```
 
 
-
-
 This will take the largest number and use it as a reference to graph those values relative to the largest graph.
-
-
-
-
-
-
-
 
 
 
