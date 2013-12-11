@@ -21,12 +21,44 @@ ctx.stroke();
 var max = 100;
 var startX = 0;
 var endX = 100;
-var multiple = 9;
+var multiple = 10;
+// Draw lines BG
 for (var ii = 0; ii < 100 ; ii++) {
     drawLine(startX,ii*multiple,  ii*multiple, 0);
-
 }
 
+
+// Draw circle
+//
+
+var drawCircle = function(x, y,  radius, color ){
+    var counterClockwise = false;
+    context.beginPath();
+    context.arc(x, y, radius, 0 ,  2* Math.PI , counterClockwise);
+    context.fillStyle = color;
+    context.fill();
+    context.lineWidth = 5;
+    context.strokeStyle = '#242424';
+    context.stroke();
+}
+
+
+var drawArc= function(x, y,  radius, color, arc, lineWidth){
+    var counterClockwise = false;
+    context.beginPath();
+    context.arc(x, y, radius, 0 ,  arc * 2 * Math.PI , counterClockwise);
+    context.lineWidth = lineWidth;
+    context.strokeStyle = color;
+    context.stroke();
+}
+
+
+drawCircle(100, 100, 55, "#242424");
+
+var lineWidth = 20;
+drawArc(100, 100, 55+lineWidth/2,  "red", 0.8, lineWidth);
+var newWidth = 100;
+drawArc(100, 100, 55+lineWidth + newWidth/2,  "blue", 0.8,  newWidth+5);
 /*
 var canvas = document.getElementById('myCanvas');
 var context = canvas.getContext('2d');
