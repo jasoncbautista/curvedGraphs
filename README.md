@@ -12,7 +12,10 @@ If you would like to instead use true values:
 
 
 
-``` HipsterGraphs.drawCurves(0.3, 0.8, 0.4, true);```
+```javascript 
+var canvasEl =  document.getElementById('myCanvas');
+HipsterGraphs.drawCurves(canvasEl, 0.3, 0.8, 0.4, true);
+```
 
 
 
@@ -28,9 +31,10 @@ If you would like to instead use true values:
 
 Another graph to represent "bucketing" of elements. 
 
-```
+```javascript
+var canvasEl =  document.getElementById('myCanvas');
 var dataArray = [0.1, 0.3, 0.5, 0.11, 0.09];
-HipsterGraphs.drawCircles(dataArray);
+HipsterGraphs.drawCircles(canvasEl, dataArray);
 ```
 
 ![alt text](https://raw.github.com/jasoncbautista/curvedGraphs/master/circle.png "Circles")
@@ -40,8 +44,9 @@ HipsterGraphs.drawCircles(dataArray);
 
 A simple percentage graph:
 
-HipsterGraphs.circlePattern(0.75);
-
+```javascript
+HipsterGraphs.circlePattern(canvasEl, 0.75);
+````
 ![alt text](https://raw.github.com/jasoncbautista/curvedGraphs/master/circlePattern.png "Circle with Pattern")
 
 
@@ -49,9 +54,9 @@ HipsterGraphs.circlePattern(0.75);
 
 For some of the graphs, Charts.js is needed:
 
-
-
 http://www.chartjs.org/
 
+
+We have modified some of the chart.js code so it is included with the codebase of HipsterCharts.
 
 
