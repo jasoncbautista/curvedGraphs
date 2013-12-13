@@ -6,23 +6,31 @@ var drawCircle = function(x, y, context, radius, color ){
     context.arc(x, y, radius, 0 ,  2* Math.PI , counterClockwise);
     context.fillStyle = color;
     context.fill();
-    context.lineWidth = 5;
-    context.strokeStyle = '#003300';
-    context.stroke();
 }
 
 var drawCircles  = function( context, circles , selectedIndex) {
     var currentOffset = 5;
+    var middle = Math.floor(circles.length/2);
+
+
+    var xBase = 0;
+    var xOffset = 4;
     for(var ii = 0; ii < circles.length; ii++) {
         var circle = circles[ii];
         var radius = circle.radius;
         var x = 0;
         x  = currentOffset;
-        var color = "green";
+        var color = "white";
         if (ii === selectedIndex ) {
-            color = "white";
+            color = "red";
         }
-        drawCircle(x+radius, 100 , context, radius, color);
+
+        if (ii >= middle ) {
+            xBase -=xOffset;
+        } else {
+            xBase +=xOffset;
+        }
+        drawCircle(x+radius , 100 + xBase  , context, radius, color);
         currentOffset += (radius*2);
     }
 };
@@ -31,14 +39,14 @@ var drawCircles  = function( context, circles , selectedIndex) {
 
 // Sample implementation:
 var circles = [];
-for(var ii = 0; ii < 10 ; ii++) {
+for(var ii = 0; ii < 6; ii++) {
     var radiusRandom = Math.random();
-    var radius = 30 * radiusRandom + 2;
+    var radius = 10 * radiusRandom + 2;
     radius = Math.ceil(radius);
     circles.push({"radius": radius});
 }
 
-var selectedIndex = Math.floor( Math.random() * 10);
+var selectedIndex = Math.floor( Math.random() * 6);
 drawCircles(context, circles, selectedIndex );
 
 // */
