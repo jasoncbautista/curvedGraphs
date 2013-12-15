@@ -53,13 +53,15 @@ var max = function(numbers) {
     max = numbers[0];
     for (var ii = 0; ii < length; ii++) {
         if (max < numbers[ii]) {
-            max = numbers[ii]
+            max = numbers[ii];
         }
     }
 
     return max;
 }
 
+
+console.log('max', max([1,5,50,2,3,5]));
 var selectedIndex = Math.floor( Math.random() * 6);
 drawCircles(context, circles, selectedIndex );
 
