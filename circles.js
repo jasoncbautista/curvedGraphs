@@ -46,6 +46,20 @@ for(var ii = 0; ii < 6; ii++) {
     circles.push({"radius": radius});
 }
 
+
+
+var max = function(numbers) {
+    var length = numbers.length;
+    max = numbers[0];
+    for (var ii = 0; ii < length; ii++) {
+        if (max < numbers[ii]) {
+            max = numbers[ii]
+        }
+    }
+
+    return max;
+}
+
 var selectedIndex = Math.floor( Math.random() * 6);
 drawCircles(context, circles, selectedIndex );
 
