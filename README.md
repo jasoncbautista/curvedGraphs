@@ -1,6 +1,6 @@
 # Hipster Charts
 
-Interesting alternatives to standard bar graphs.
+Interesting alternatives to standard bar graphs.  Simple in design, and not too complex. 
 
 
 ## Curved Bar Graph
